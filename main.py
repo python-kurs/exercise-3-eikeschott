@@ -1,19 +1,18 @@
 # Exercise 3
+# import functions from utils here
 from pathlib import Path
 import utils as u
-# import functions from utils here
 
-
-data_dir = Path("data")
-output_dir = Path("solution")
+data_dir=Path("data")
+output_dir=Path("solution")
 
 # 1. Contstruct the path to the text file in the data directory using the `pathlib` module [2P]
 
-text = Path(data_dir, "cars.txt")
+carspath=Path(data_dir, "cars.txt")
 
 # 2. Read the text file [2P]
 
-cars = open(str(text), "r").read()
+cars=open(str(carspath), "r").read()
 
 # 3. Count the occurences of each item in the text file [2P]
 
@@ -29,7 +28,8 @@ u.dircheck(output_dir)
 with open('counts.csv', 'w') as f:
     for key in counts.keys():
         f.write("%s,%s\n"%(key,counts[key]))
-        
+
+
 #    item, count
 #    item_name_1, item_count_1
 #    item_name_2, item_count_2
